@@ -1,0 +1,75 @@
+\documentclass[journal]{IEEEtran}
+%\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage[cmex10]{amsmath}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{epsfig}
+\usepackage{algorithmic}
+\usepackage[linesnumbered,ruled,slide]{algorithm2e}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{verbatim}
+\usepackage{caption3}
+\usepackage[justification=centering]{caption}
+\usepackage{epstopdf}
+\usepackage{url}
+\usepackage{array,subfig}
+
+\begin{document}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\title{DroneLoc: Drone Localization with Smartphone Camera Network\vspace{-1mm}}
+
+%\author{\IEEEauthorblockN{Naigao Jin, Lei Wang£¬Xingwen Zhang, Wei Liu, Qing Tan }\\
+%\IEEEauthorblockA{School of Software, Dalian University of Technology, China\\
+%Key Laboratory for Ubiquitous Network and Service Software of Liaoning Province\\
+%ngjin@dlut.edu.cn}
+%\thanks{Naigao Jin is the corresponding author.}
+%\vspace{-2mm}}
+
+% make the title area
+\maketitle
+
+%\thispagestyle{plain}
+%\pagestyle{plain}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+
+\begin{abstract}
+%\boldmath
+Drones are increasingly flying in sensitive airspace where their presence may cause harm, such as near airports, forest fires, large crowded events, secure buildings, and even jails. A cost-effective drone detection and localization system is needed to warn of the presence of drones in such cases. Unpredictable computer controlled movements, speed and maneuver abilities of drones, their resemblance to birds in appearance when observed from a distance make it challenging to detect, identify and correctly localize them in complex outdoor environments. 
+To overcome these limitations in existing costly solutions, this paper formally describes, designs, implements, and evaluates a smartphone-based  drone  localization system, i.e., DroneLoc.
+The key idea behind DroneLoc is to utilize the classify ability of deep neural network  to implement drone detection, then implement drone localization by fusion the detection result of multiple smartphones.
+In this study, we investigate camera integrated in modern smartphone and leverage the location in the image as measurement information.
+DroneLoc  turns the localization problem into search problem  by collecting the  detection data of smartphones in the camera network. 
+Location in the image is estimated through  deep neural network . 
+Drone localization is performed by minimizing the  distance between the measured sequence and the vectors in a database.
+The proposed DroneLoc system is evaluated through extensive simulations and physical experiments (a test-bed with 30 smartphone nodes). 
+Evaluation results demonstrate that ThunderLoc can effectively localize the drone with good robustness.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Drone Localization, Camera Network
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\input{Introduction}
+\input{Overview}
+\input{Design}
+\input{Discussion}
+\input{Result}
+\input{Relatedwork}
+\input{Conclusion}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{Main}
+
+\end{document}

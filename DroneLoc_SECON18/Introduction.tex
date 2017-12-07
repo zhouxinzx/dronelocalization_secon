@@ -1,0 +1,50 @@
+
+\section{Introduction}
+%DroneLoc
+
+With the advent of inexpensive commercially available un-manned aerial vehicles (UAV), drones are rapidly rising in popularity as a host of a wide class of applications ranging from commercial delivery , environment monitoring, photography, policing, fire fighting, just to name a few. However, with the rise in drone usage, there has also been a rise in incidents involving drones, such as mid-air collisions, damage to property, and violations of privacy.
+In particular, drones are increasingly flying in sensitive airspace where their presence may cause harm, such as near airports, forest fires, large crowded events, and even jails. A quadcopter crashed on the White House lawn, raising concerns about the safety of buildings and political leaders. The presence of drones has interfered with and grounded aircraft fighting forest fires. Drone crashes have also disrupted sporting events such as the US Open tennis tournament as well as a World Cup skiing race. In fact, based on FAA data, more than 300 drone incidents were reported in California alone between April 2014 and Jan 2016, which is equivalent of 15 incidents per month on average or 1 incident every two days.
+
+A variety of approaches have been explored to interdict drones. 
+These include shooting nets at the drones to tamper with their propeller to bring them down, using lasers to shoot down drones, spoofing GPS to confuse a drone localization system, hijacking the software of drones by hacking into them, using other drones to hunt down unauthorized drones, and even training eagles to attack and disable drones. 
+However, these interdiction strategies typically presume that the presence of the drone has already been detected. 
+Geofencing is useful to prevent drones from flying into fixed areas known a priori as sensitive, but requires manufacturers to install such software and is less useful to prohibit drones from flying around temporary event venues. The work utilizing passive RF to identify drones has sought, for example, to detect the frequency of transmission, the MAC address of the drone, and the frequency of packet communication. 
+Recent work has sought to develop drone detection systems that leverage either microphone, camera, or radar to sense the presence of drones. Considering the physical signatures of the drone motion, Mobisys2017 detect the presence drone by passively eavesdropping on the RF communication between a drone and its controller (Wi-Fi standard). 
+All these techniques suffer from various limitations. Audio-based approaches can be confused by other sounds in noisy environments, has limited range, and cannot detect drones that employ noise canceling techniques. Thermal and IR imaging cameras for long distance are prohibitively expensive and have limited coverage. Radio-frequency techniques based on active radar introduce RF interference. RF-based methods often mistake the drone for birds and increase nuisance alarm rate.
+
+In this paper, we propose a new method for thunder localization by leveraging dual-microphone smartphones.
+With commodity dual-microphone smartphones, the binary left/right data from dual-microphone of each smartphone is effectively
+collected and utilized to estimate the location of the thunder.
+The proposed system solely relies on the collaborative effort of the participating users to achieve thunder localization.
+The ThunderLoc project created such a prototype system with different types of Android based mobile phones, and validate our approach with a virtual thunder study, showcasing the potential of the proposed solution. 
+DroneLoc  takes advantage of the sensing capabilities, including the acoustics, position and orientation offered by the microphone, GPS, accelerometer and magnetometer on the smartphones.
+The key idea of DroneLoc is the division of a 2D localization space into distinct regions by the perpendicular bisectors of lines joining dual-microphone in each smartphone. 
+Each distinct region formed in this manner can be uniquely identified by a binary sequence.
+We firstly construct the binary sequence table that maps all these feasible binary sequences to the corresponding regions by using the locations and directions information of the smartphone nodes.
+The smartphone nodes determine the measured binary sequence based on the sign of TDOA between two microphones of each smartphone node.
+The location of an acoustic source is estimated by searching through the binary sequence table to determine the ¡°nearest¡± feasible sequence to the measured sequence. 
+To our knowledge, drone localization with smartphone-based  has not been considered in the literature before.
+Our contributions are as follows:
+
+1) We designed, implemented, and deployed a smartphone-based
+drone localization system called
+DroneLoc. Our DroneLoc app for Android platform has
+been installed by more than 1,00 smartphone in our
+university to monitor the drone near our campus. To the
+best of our knowledge, DroneLoc is the first smartphone-based drobe localization service.
+
+
+
+
+The rest of the article is organized as follows. Section \uppercase\expandafter{\romannumeral 2} presents an overview of the DroneLoc system.
+Then, the design of ThunderLoc is introduced in section \uppercase\expandafter{\romannumeral 3}.
+Section \uppercase\expandafter{\romannumeral 4} discusses several issues concerning practical system deployment.
+Section \uppercase\expandafter{\romannumeral 5} presents simulation results and an empirical evaluation on
+the test-bed. Section \uppercase\expandafter{\romannumeral 6} briefly surveys related work.
+Section \uppercase\expandafter{\romannumeral 7} concludes the whole article.
+
+
+
+
+
+

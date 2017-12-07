@@ -1,0 +1,54 @@
+
+\section{Related Work}
+
+
+%Based on the high position accuracy of the LMA (6¨C12 m RMS in the horizontal and 20¨C30 m RMS in the vertical for sources over the network) [ Thomas et al. , 2004 ], it can be used as
+%reference (ground truth) to investigate the position accuracy of the acoustic array.
+% Audible thunder (great than 20 Hz,3.3 to 500 Hz)
+%: A major challenge for the early TOA systems was the need for precise time synchronization of multiple remote sensors.
+
+%As a case study of acoustic source localization technology, 
+
+% Lightning@SG, an App developed by National Environment Agency (NEA) that provides current lightning situation in Singapore, which uses lightning information from the latest lightning detection and location system to locate lightning. 
+% It has four lightning detection sensors located in four cities.
+
+%Thunder localization has drawn more attention for lightning location systems in recent years.
+%According to the different frequency, 
+Thunder localization system can use infrasonic signals, supersonic signals, and audible signals as the measurement data.
+Due to space constraints, we can only mention a few related works using audible sound data.
+%Audible thunder is thought to come from the expansion of the rapidly heated lightning channel.
+Most of the existing thunder localization systems using audible sound data are based on centralized architecture.
+Arechiga, \emph{et al.} \cite{arechiga2011acoustic} studied acoustic reconstruction of lightning channel geometry using microphone arrays, improved upon thunder localization by using compact acoustic arrays with 1kS/s sample rate.
+Akiyama, \emph{et al.} \cite{akiyama1985channel} used rhombus array with 100k sample rate and 3.50m base line.
+Few, \emph{et al.} \cite{few1970lightning} implemented lightning channel reconstruction using 'Y' 4-element array with 1k sample rate and 30m base line.
+MacGorman, \emph{et al.} \cite{macgorman1978lightning} considered the effect of temperature and wind, presented a lightning localization system with square array with 0.5k sample rate and 50m base line.
+Johnson, \emph{et al.} \cite{johnson2011imaging}  used a network of broadband microphones, including a 4-element array with 1k sample rate, to locate the sources of thunder occurring during an electrical storm.
+Qiu, \emph{et al.} \cite{qiu2012synchronized}  used 3-element array with 100k sample rate and 12.5m base line to estimate the location of thunders.
+
+
+In the past few years, there has been a growing interest for acoustic localization based on independent (unsynchronized) acoustic sensors, each made of two or more synchronized microphones. 
+UbiK leveraged the dual-microphone on a mobile device to accurately localize the keystrokes \cite{UbiK}.
+Zhu, \emph{et al.} \cite{Zhu2014Context} proposed to utilize dual-microphone on three phones to identify keystrokes of a nearby keyboard based on
+time difference of arrival (TDOA) measurements.
+Liu, \emph{et al.}  \cite{Liu2015Snooping}  achieved keystroke recognition by discriminating keystrokes based on TDOA of the keystroke sound at the dual-microphone of the off-the-shelf smartphone.
+Wang, \emph{et al.} \cite{wang2003acoustic} described a system having static cluster architecture, the system experienced a problem in that the accuracy decreased when an acoustic source occurred between the clusters.
+Chen, \emph{et al.} \cite{chen2004dynamic} showed that nodes in the system did not need to recognize their cluster head, reducing the constraints on deployment of the localization system.
+Hu, et al. \cite{hu2009design} design the system based on 2-tier architecture, which experienced cost and deployment problems especially in the very large target area.
+%Rabbat, \emph{et al.} \cite{rabbat2005robust} proposed a decentralized algorithm based on the distributed ML estimation technique using token ring architecture.
+%Kim, \emph{et al.} \cite{kim2009locating} proposed to identify the node closest to the acoustic source, based on TOA comparisons between all nodes, thus incurring high communication cost and requiring global synchronization between all sensor nodes.
+% Lightning is a method proposed in \cite{wang2008lightning} to identify the sensor closest to the acoustic source, also based on expensive broadcasting/flooding.
+%Aarabi, \emph{et al.} ~\cite{aarabi1900fusion} used 10 dual-microphone arrays distributed in a room and used their data to locate three speakers.
+%Wu, \emph{et al.} ~\cite{wu2012fusion} used three dual-microphone arrays to locate two sound sources in a distributed way in which only the local DOA estimates are communicated among arrays.
+Canclini, \emph{et al.}\cite{canclini2013acoustic} proposed a method for localizing an acoustic source with distributed microphone networks based on TDOA between microphones of the same sensor. 
+%Most of the existing acoustic source localization methods in sensor networks are based on range-based measurement.
+%In contrast, 
+Different from these range-based methods, 
+our proposed ThunderLoc is a range-free method, which can achieve robust localization performance.
+
+The most related work to our ThunderLoc project is Lightning@SG, an App developed by National Environment Agency (NEA) in Singapore~\cite{LightningSG}. 
+By utilizing the four sensors located in different cities, Lightning@SG monitors the lightning area based on current location of user, and pushes notifications of the lightning situation.
+With the surging of smartphone sensing and wireless networking techniques,
+crowdsensing has become a promising paradigm for cross-space and large-scale sensing. The iShake system uses smartphones as seismic sensors to measure and deliver ground motion intensity parameters produced by earthquakes~\cite{reilly2013mobile}.
+Hu, \emph{et al.} presented SmartRoad, a crowd-sourced road sensing system that detects and identifies traffic regulators, traffic lights, and stop signs~\cite{hu2013smartroad}.  
+Zhou, \emph{et al.} presented  a novel bus arrival time prediction system based on crowd-participatory sensing~\cite{zhou2012long}. 
+Motivated by these works, we uses dual-microphone smartphones as sensors to estimate the position of the thunders by crowdsensing mechanisms.
